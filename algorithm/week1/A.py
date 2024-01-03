@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/group-anagrams/
+
 class Solution:
     def groupAnagrams(strs: list[str]) -> list[list[str]]:
         # allocate dictionary 
@@ -18,6 +20,8 @@ class Solution:
         # from dictionary to list 
         return list(anagrams.values())
 
+
+# 처음엔 아스키 코드의 합이 동일한 것을 이용해서 풀려고 시도했지만 인덱스 반환에서 실패
     def groupAnagrams2(strs: list[str]) -> list[list[str]]:
         _sum=0 
         sum_list= []
@@ -30,10 +34,6 @@ class Solution:
         print(sum_list)
 
 
-
-
-# 처음엔 아스키 코드의 합이 동일한 것을 이용해서 풀려고 시도했지만 인덱스 반환에서 실패
-
-# result= Solution.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
-result= Solution.groupAnagrams2(["eat","tea","tan","ate","nat","bat"])
+result= Solution.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+# result= Solution.groupAnagrams2(["eat","tea","tan","ate","nat","bat"])
 print(result)
