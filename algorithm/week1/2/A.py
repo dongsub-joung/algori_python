@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/implement-stack-using-queues/
 # https://zhenyu0519.github.io/2020/07/03/lc255/#methodology
 
+import collections
+
 class MyStack:
 
     def __init__(self):
